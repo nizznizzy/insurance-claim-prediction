@@ -21,7 +21,7 @@
 		<form action="{{ url_for('predict')}}" method="post">
 			<div class="one">
 			Age<br>
-			<input type="text" name="Age" class="" placeholder="eg. 30">
+			<input type="text" name="Age" class="" placeholder="eg. 30" required>
 			</div><br><br>
 			<div class="two">
                 Gender<br>
@@ -32,11 +32,11 @@
 			</div><br><br>
 			<div class="three">
 			BMI<br>
-			<input type="text" name="Bmi" class="" placeholder="eg. 33">
+			<input type="text" name="Bmi" class="" placeholder="eg. 33" required>
             </div><br><br>
             <div class="four">
 				Number of children<br>
-			<select name="Num_of_children" class="" required="required">
+			<select name="Num_of_children" class="" required>
             	<option value="0">0</option>
             	<option value="1">1</option>
             	<option value="2">2</option>
@@ -45,14 +45,14 @@
             </div><br><br>
 			<div class="five">
 				Smoking Habit<br>
-                <input type="radio" class="" name="Smoking" value="1">
+                <input type="radio" class="" name="Smoking" value="1" checked="True">
                 <label for="Smoking">Smoker</label>
                 <input type="radio" class="" name="Smoking" value="0">
                 <label for="Smoking">Non-Smoker</label>			
     		</div><br><br>
     		<div class="six">
             Region<br>
-                <select name="Region" class="" required="required">
+                <select name="Region" class="" required>
                     <option value="0">North East</option>
                     <option value="1">North West</option>
                     <option value="2">South East</option>
@@ -61,7 +61,7 @@
     		</div><br><br>
     		<div class="seven">
 			Medical costs billed by health insurance<br>
-                <input type="text" name="charges" class="" placeholder="Charges">
+                <input type="text" name="charges" class="" placeholder="Charges" required>
             </div><br><br>
 
     		<button type="submit" class="btn btn-primary">Submit</button>
@@ -70,5 +70,5 @@
     <h2>{{pred_text}}</h2>
 
 </body>
-<footer>@Author Nizamudeen</footer>
+<footer>@author: Nizamudeen</footer>
 </html>
