@@ -6,7 +6,7 @@ import sklearn
 
 
 app = Flask(__name__)
-model = pickle.load(open('rf_random_model.pkl','rb'))
+model = pickle.load(open('random_clf.pkl','rb'))
 @app.route('/', methods=['GET','POST'])
 def home():
     return render_template('index.html')
