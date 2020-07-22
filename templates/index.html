@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insurance Claim Prediction</title>
+	<style type="text/css">
+		body{background-color: #f3f3f3;padding: 0px; text-align: center; }
+		form{padding: 10px; background-color: #FFF;}
+		.one{background-color: #f3f3f3; }
+		.two{background-color: #f3f3f3; }
+		.three{background-color: #f3f3f3; }
+		.four{background-color: #f3f3f3; }
+		.five{background-color: #f3f3f3; }
+		.six{background-color: #f3f3f3; }
+		.seven{background-color: #f3f3f3; }
+
+	</style>
+</head>
+<body>
+	<h1>Insurance Claim Prediction</h1>
+	<div class="body_form">
+		<form action="{{ url_for('predict')}}" method="post">
+			<div class="one">
+			Age<br>
+			<input type="text" name="Age" class="" placeholder="eg. 30">
+			</div><br><br>
+			<div class="two">
+                Gender<br>
+                <input type="radio" class="" name="Gender" value="1" checked="True">
+                <label for="male">Male</label>
+                <input type="radio" class="" name="Gender" value="0">
+                <label for="female">Female</label>
+			</div><br><br>
+			<div class="three">
+			BMI<br>
+			<input type="text" name="Bmi" class="" placeholder="eg. 33">
+            </div><br><br>
+            <div class="four">
+				Number of children<br>
+			<select name="Num_of_children" class="" required="required">
+            	<option value="0">0</option>
+            	<option value="1">1</option>
+            	<option value="2">2</option>
+            	<option value="3">3</option>
+        	</select>
+            </div><br><br>
+			<div class="five">
+				Smoking Habit<br>
+                <input type="radio" class="" name="Smoking" value="1">
+                <label for="Smoking">Smoker</label>
+                <input type="radio" class="" name="Smoking" value="0">
+                <label for="Smoking">Non-Smoker</label>			
+    		</div><br><br>
+    		<div class="six">
+            Region<br>
+                <select name="Region" class="" required="required">
+                    <option value="0">North East</option>
+                    <option value="1">North West</option>
+                    <option value="2">South East</option>
+                    <option value="3">South West</option>
+                </select>			
+    		</div><br><br>
+    		<div class="seven">
+			Medical costs billed by health insurance<br>
+                <input type="text" name="charges" class="" placeholder="Charges">
+            </div><br><br>
+
+    		<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+    </div> <br>
+    <h2>{{pred_text}}</h2>
+
+</body>
+<footer>@Author Nizamudeen</footer>
+</html>
